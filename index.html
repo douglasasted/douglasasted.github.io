@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="imgs/icon.png"/>
+    <title>Douglas Asted</title>
+</head>
+<body>
+    <div align="center">
+        <br><br><br><br><br><br>
+        <img src="imgs\logo.png" align="center"></img>
+        <br>
+        <a href="https://twitter.com/douglasasted">
+            <img src="imgs\twitter_button\twitter_button_1.png" id="twitter-button" width="120" height="84" /></a>
+        <a href="https://douglas-asted.itch.io">
+            <img src="imgs\games_button\games_button_1.png" id="games-button" width="120" height="84" /></a>
+        <a href="https://www.youtube.com/channel/UC0I7pg0UH6UQVQLXM6t8xrw">
+            <img src="imgs\youtube_button\youtube_button_1.png" id="youtube-button" width="120" height="84" /></a>
+        <a href="https://discord.gg/tpNpt4d">
+            <img src="imgs\discord_button\discord_button_1.png" id="discord-button" width="120" height="84" /></a>
+    </div>
+    <script>
+        const states = {
+            'twitter_default': "imgs/twitter_button/twitter_button_1.png",
+            'twitter_hover': "imgs/twitter_button/twitter_button_5.png",
+            'games_default': "imgs/games_button/games_button_1.png",
+            'games_hover': "imgs/games_button/games_button_5.png",
+            'youtube_default': "imgs/youtube_button/youtube_button_1.png",
+            'youtube_hover': "imgs/youtube_button/youtube_button_5.png",
+            'discord_default': "imgs/discord_button/discord_button_1.png",
+            'discord_hover': "imgs/discord_button/discord_button_5.png"
+        };
+
+        let twitter_button = document.querySelector('#twitter-button');
+        let games_button = document.querySelector('#games-button');
+        let youtube_button = document.querySelector('#youtube-button');
+        let discord_button = document.querySelector('#discord-button');
+
+        twitter_button.addEventListener('mouseenter', function(e) {
+            twitter_button.setAttribute('src', states.twitter_hover);
+        });
+        twitter_button.addEventListener('mouseleave', function(e) {
+            twitter_button.setAttribute('src', states.twitter_default);
+        });
+        
+        games_button.addEventListener('mouseenter', function(e) {
+            games_button.setAttribute('src', states.games_hover);
+        });
+        games_button.addEventListener('mouseleave', function(e) {
+            games_button.setAttribute('src', states.games_default);
+        });
+
+        youtube_button.addEventListener('mouseenter', function(e) {
+            youtube_button.setAttribute('src', states.youtube_hover);
+        });
+        youtube_button.addEventListener('mouseleave', function(e) {
+            youtube_button.setAttribute('src', states.youtube_default);
+        });
+
+        discord_button.addEventListener('mouseenter', function(e) {
+            discord_button.setAttribute('src', states.discord_hover);
+        });
+        discord_button.addEventListener('mouseleave', function(e) {
+            discord_button.setAttribute('src', states.discord_default);
+        });
+    </script>
+</body>
+</html>
